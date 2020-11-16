@@ -20,8 +20,8 @@ cin >> nazwisko;
 
 plik.open( "dane.txt", ios::out | ios::app );
 
-plik << imie << endl;
-plik << nazwisko << endl;
+plik << imie <<" "<<  nazwisko << endl;
+
 
 
 cout << "Dane zostaly zapisane!" << endl;
@@ -40,11 +40,13 @@ plik.open( "dane.txt", ios::in );
 if(plik.is_open())
 	{
 		char wiersz[10000];
+
 		while(plik.getline(wiersz,10000)) 
 		{
-			cout<< wiersz <<endl; 
+			cout<< wiersz << endl;
 			
 		}
+        cout << endl;
 	}
 
 
