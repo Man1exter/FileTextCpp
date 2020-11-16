@@ -42,8 +42,12 @@ if(plik.good() == false)
 string linia;
 int nrLinii = 1;
 
-while(getline( plik, linia ))
+
+while(!plik.eof())
 {
+getline( plik, linia );
+
+
     switch(nrLinii)
     {
         case 1: imie = linia; break;
@@ -51,6 +55,7 @@ while(getline( plik, linia ))
     }
     nrLinii++;
 }
+
 
 
 plik.close();
