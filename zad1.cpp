@@ -1,6 +1,5 @@
 #include <iostream>
-#include <vector>
-#include <string>
+#include <fstream>
 
 using namespace std;
 
@@ -8,6 +7,10 @@ using namespace std;
 
 int main(){
 
+
+fstream plik;
+
+plik.open( "dane.txt", ios::out, ios::app );
 
 
     return 0;
