@@ -31,37 +31,22 @@ plik.close();
 
 
 
-plik.open("dane.txt", ios::in);
-
-if(plik.good() == false)
-{
-    cout << "Podany plik nie istnieje!" << endl;
-    exit(0);
-}
-
-string linia;
-int nrLinii = 1;
+// odczyt z pliku i pokazanie w konsoli: ... 
 
 
-while(!plik.eof())
-{
-getline( plik, linia );
+plik.open( "dane.txt", ios::in );
 
 
-    switch(nrLinii)
-    {
-        case 1: imie = linia; break;
-        case 2: nazwisko = linia; break;
-    }
-    nrLinii++;
-}
+if(plik.is_open())
+	{
+		char wiersz[10000];
+		while(plik.getline(wiersz,10000)) 
+		{
+			cout<< wiersz <<endl; 
+			
+		}
+	}
 
-
-
-plik.close();
-
-cout << imie << endl;
-cout << nazwisko << endl;
 
 
     return 0;
