@@ -5,7 +5,45 @@
 
 using namespace std;
 
+
+
+
+
+
+struct student{
+    string imie;
+    string nazwisko;
+    int nrAlbumu;
+    int wiek;
+    float srOcen;
+} dane;
+
+
+
+
 int main(){
+
+
+
+student dane;
+
+cout << "Podaj imie:" << endl;
+cin >> dane.imie;
+cout << "Podaj nazwisko:" << endl;
+cin >> dane.nazwisko;
+cout << "Podaj nrAlbumu:" << endl;
+cin >> dane.nrAlbumu;
+cout << "Podaj wiek:" << endl;
+cin >> dane.wiek;
+cout << "Podaj srednia ocen:" << endl;
+cin >> dane.srOcen;
+
+
+
+
+
+
+
 
 
 
@@ -16,8 +54,11 @@ int main(){
 }
 
 
-// Na podstawie przykładów przedstawionych na wykładzie napisz program zapisujący do ​plikubinarnego​ dane studenta. Każdy student będzie opisany takimi cechami jak:                                      Nazwisko, Imie,Nr_albumu, Wiek, Srednia_ocen.
-// Wykorzystaj typ złożony języka C++ ​Struct​.Program powinien zawierać trzy metody:
+// Na podstawie przykładów przedstawionych na wykładzie napisz program zapisujący do ​pliku binarnego​ dane studenta. Każdy student będzie opisany takimi cechami jak:                                      Nazwisko, Imie,Nr_albumu, Wiek, Srednia_ocen.
+
+                                                           // Wykorzystaj typ złożony języka C++ ​Struct​.
+
+                       //Program powinien zawierać trzy metody:
 
 //czytaj_dane_studenta_z_klawiatury​- odczytuje z klawiatury dane studenta
 //zapisz_dane_studenta_do_pliku​ - zapisuje strukturę do pliku binarnego
