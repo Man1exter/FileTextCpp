@@ -23,7 +23,7 @@ struct Student{
 
 
 
-int main(void){
+int main(){
 
 
 
