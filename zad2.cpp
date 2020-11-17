@@ -61,19 +61,18 @@ ofs.close();
 
 
 
-
 ifstream ifs("dane.bin", ios::binary);
 
 char* temp = new char[sizeof(Student)];
 ifs.read(temp, sizeof(Student));
 
+Student* student2 = (Student*)(temp);
+
 cout << "Student " << dane.imie  <<" "<< dane.nazwisko << " o numerze albumu: " << dane.nrAlbumu << " ma lat " << dane.wiek << " ma srednia ocen rowna: " << dane.srOcen <<"  Potwierdzenie do zapisu i odczytu!" << endl;
+
 delete student;
 
     return 0;
 }
 
 
-
-//zapisz_dane_studenta_do_pliku​ - zapisuje strukturę do pliku binarnego
-//czytaj_dane_z_pliku​ - odczytuje dane z pliku binarnego i wyświetla na ekranie komputera
