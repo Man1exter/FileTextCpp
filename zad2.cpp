@@ -62,7 +62,7 @@ plik << uczniowie[i].imie <<" "<< uczniowie[i].nazwisko <<" "<< uczniowie[i].wie
 
 plik.close();
 
-plik.open( "studenci.txt", ios::in );
+plik.open( "studenci.txt", ios::binary );
 
 
 if(plik.is_open())
