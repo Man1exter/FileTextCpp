@@ -4,22 +4,16 @@
 #include <cstdlib>
 
 
-
 using namespace std;
 
 
-
-
-
-
 struct Student{
-    string imie;
-    string nazwisko;
+    char imie[50];
+    char nazwisko[50];
     int nrAlbumu;
     int wiek;
     float srOcen;
-} dane;
-
+};
 
 
 
@@ -28,6 +22,7 @@ int main(){
 
 
 Student dane;
+
 
 cout << "Podaj imie:" << endl;
 cin >> dane.imie;
@@ -69,7 +64,7 @@ ifs.read(temp, sizeof(Student));
 
 Student* student2 = (Student*)(temp);
 
-cout << "Student " << dane.imie  <<" "<< dane.nazwisko << " o numerze albumu: " << dane.nrAlbumu << " oraz ma lat " << dane.wiek << " ma srednia ocen rowna: " << dane.srOcen <<"  Potwierdzenie do zapisu i odczytu!" << endl;
+cout << "Student " << dane.imie  <<" "<< dane.nazwisko << " o numerze albumu: " << dane.nrAlbumu << " oraz ma lat " << dane.wiek << " ma srednia ocen rowna: " << dane.srOcen <<"  --------Potwierdzenie do zapisu i odczytu!-------" << endl;
 
 delete student;
 
