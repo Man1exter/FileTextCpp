@@ -53,7 +53,7 @@ for(int i = 0; i < 5; i++){
 cout << endl;
 
 for(int i = 0; i < 5; i++){
-cout << uczniowie[i].imie <<" "<< uczniowie[i].nazwisko <<" "<< uczniowie[i].wiek <<" "<< uczniowie[i].nrAlbumu <<" "<< uczniowie[i].srOcen;
+cout << uczniowie[i].imie <<" "<< uczniowie[i].nazwisko <<" "<< uczniowie[i].wiek <<" "<< uczniowie[i].nrAlbumu <<" "<< uczniowie[i].srOcen << endl;
 } 
 
     return 0;
