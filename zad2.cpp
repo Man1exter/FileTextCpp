@@ -39,7 +39,7 @@ cout << "Podaj srednia ocen:" << endl;
 cin >> dane.srOcen;
 
 
-
+cout << "Student " << dane.imie  <<" "<< dane.nazwisko << " o numerze albumu: " << dane.nrAlbumu << " ma lat " << dane.wiek << " ma srednia ocen rowna: " << dane.srOcen << endl;
 
 
 
