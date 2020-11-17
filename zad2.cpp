@@ -2,6 +2,7 @@
 #include <fstream>
 #include <string>
 #include <cstdlib>
+#include <stdio.h>
 
 using namespace std;
 
@@ -54,11 +55,20 @@ student->wiek;
 student->srOcen;
 
 ofs.write((char*)(student), sizeof(Student));
- ofs.close();
+ofs.close();
+
  delete student;
 
 
 
+
+ifstream ifs("dane.bin", ios::binary);
+
+char* temp = new char[sizeof(Student)];
+ifs.read(temp, sizeof(Student));
+
+cout << "Student " << dane.imie  <<" "<< dane.nazwisko << " o numerze albumu: " << dane.nrAlbumu << " ma lat " << dane.wiek << " ma srednia ocen rowna: " << dane.srOcen <<"  Potwierdzenie do zapisu i odczytu!" << endl;
+delete student;
 
     return 0;
 }
