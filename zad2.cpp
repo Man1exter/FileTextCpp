@@ -10,7 +10,7 @@ using namespace std;
 
 
 
-struct student{
+struct Student{
     string imie;
     string nazwisko;
     int nrAlbumu;
@@ -25,7 +25,7 @@ int main(){
 
 
 
-student dane;
+Student dane;
 
 cout << "Podaj imie:" << endl;
 cin >> dane.imie;
@@ -43,9 +43,19 @@ cout << "Student " << dane.imie  <<" "<< dane.nazwisko << " o numerze albumu: " 
 
 
 
+ofstream ofs("dane.bin", ios::binary);
 
+Student* student = new Student;
 
+student->imie;
+student->nazwisko;
+student->nrAlbumu;
+student->wiek;
+student->srOcen;
 
+ofs.write((char*)(student), sizeof(Student));
+ ofs.close();
+ delete student;
 
 
 
@@ -54,12 +64,6 @@ cout << "Student " << dane.imie  <<" "<< dane.nazwisko << " o numerze albumu: " 
 }
 
 
-// Na podstawie przykładów przedstawionych na wykładzie napisz program zapisujący do ​pliku binarnego​ dane studenta. Każdy student będzie opisany takimi cechami jak:                                      Nazwisko, Imie,Nr_albumu, Wiek, Srednia_ocen.
 
-                                                           // Wykorzystaj typ złożony języka C++ ​Struct​.
-
-                       //Program powinien zawierać trzy metody:
-
-//czytaj_dane_studenta_z_klawiatury​- odczytuje z klawiatury dane studenta
 //zapisz_dane_studenta_do_pliku​ - zapisuje strukturę do pliku binarnego
 //czytaj_dane_z_pliku​ - odczytuje dane z pliku binarnego i wyświetla na ekranie komputera
