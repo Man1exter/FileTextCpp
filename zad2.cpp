@@ -4,6 +4,7 @@
 #include <cstdlib>
 #include <stdio.h>
 
+
 using namespace std;
 
 
@@ -22,7 +23,7 @@ struct Student{
 
 
 
-int main(){
+int main(void){
 
 
 
@@ -68,9 +69,12 @@ ifs.read(temp, sizeof(Student));
 
 Student* student2 = (Student*)(temp);
 
-cout << "Student " << dane.imie  <<" "<< dane.nazwisko << " o numerze albumu: " << dane.nrAlbumu << " ma lat " << dane.wiek << " ma srednia ocen rowna: " << dane.srOcen <<"  Potwierdzenie do zapisu i odczytu!" << endl;
+cout << "Student " << dane.imie  <<" "<< dane.nazwisko << " o numerze albumu: " << dane.nrAlbumu << " oraz ma lat " << dane.wiek << " ma srednia ocen rowna: " << dane.srOcen <<"  Potwierdzenie do zapisu i odczytu!" << endl;
 
 delete student;
+
+
+
 
     return 0;
 }
