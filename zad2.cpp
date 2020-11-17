@@ -20,6 +20,9 @@ struct Osoba{
 
 int main(){
 
+fstream plik;
+
+plik.open( "studenci.txt", ios::out | ios::app);
 
 Osoba uczniowie[5];
 
@@ -53,8 +56,26 @@ for(int i = 0; i < 5; i++){
 cout << endl;
 
 for(int i = 0; i < 5; i++){
-cout << uczniowie[i].imie <<" "<< uczniowie[i].nazwisko <<" "<< uczniowie[i].wiek <<" "<< uczniowie[i].nrAlbumu <<" "<< uczniowie[i].srOcen << endl;
+plik << uczniowie[i].imie <<" "<< uczniowie[i].nazwisko <<" "<< uczniowie[i].wiek <<" "<< uczniowie[i].nrAlbumu <<" "<< uczniowie[i].srOcen << endl;
 } 
+
+
+plik.close();
+
+plik.open( "studenci.txt", ios::in );
+
+
+if(plik.is_open())
+	{
+		char wiersz[10000];
+
+		while(plik.getline(wiersz,10000)) 
+		{
+			cout<< wiersz << endl;
+			
+		}
+        cout << endl;
+	}
 
     return 0;
 }
