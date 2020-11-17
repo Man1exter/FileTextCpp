@@ -47,12 +47,14 @@ cout << endl;
 
 for(int i = 0; i < 5; i++){
     cout << "podaj srednia ocen: " << uczniowie[i].imie <<" "<< uczniowie[i].nazwisko <<" ";
-    cin >> uczniowie[i].wiek;
+    cin >> uczniowie[i].srOcen;
 }
 
 cout << endl;
 
-
+for(int i = 0; i < 5; i++){
+cout << uczniowie[i].imie <<" "<< uczniowie[i].nazwisko <<" "<< uczniowie[i].wiek <<" "<< uczniowie[i].nrAlbumu <<" "<< uczniowie[i].srOcen;
+} 
 
     return 0;
 }
