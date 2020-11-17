@@ -22,7 +22,7 @@ int main(){
 
 fstream plik;
 
-plik.open( "studenci.txt", ios::out | ios::app);
+plik.open( "studenci.txt", ios::out | ios::binary);
 
 Osoba uczniowie[5];
 
