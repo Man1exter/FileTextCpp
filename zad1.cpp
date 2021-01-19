@@ -5,7 +5,14 @@
 
 using namespace std;
 
+void czytaj(string &imie, string &nazwisko){
 
+cout<< "Podaj swoje imie: ";
+cin >> imie;
+cout << "Podaj swoje nazwisko: ";
+cin >> nazwisko;
+
+}
 
 int main(){
 
@@ -13,22 +20,15 @@ string imie,nazwisko;
 
 fstream plik;
 
-cout<< "Podaj swoje imie: ";
-cin >> imie;
-cout << "Podaj swoje nazwisko: ";
-cin >> nazwisko;
+czytaj(imie,nazwisko);
 
 plik.open( "dane.txt", ios::out | ios::app );
 
 plik << imie <<" "<<  nazwisko << endl;
 
 
-
 cout << "Dane zostaly zapisane!" << endl;
 plik.close();
-
-
-
 
 
 // odczyt z pliku i pokazanie w konsoli: ... 
@@ -48,7 +48,6 @@ if(plik.is_open())
 		}
         cout << endl;
 	}
-
 
 
     return 0;
