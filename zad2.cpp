@@ -22,6 +22,9 @@ plik.open( "studenci.bin", ios::out | ios::binary);
 
 Osoba uczniowie[5];
 
+if(plik.is_open()){
+
+
 for(int i = 0; i < 5; i++){
     cout << "podaj imie i nazwisko " << i+1 << " ucznia: " ;
     cin >> uczniowie[i].imie;
@@ -55,23 +58,25 @@ for(int i = 0; i < 5; i++){
 plik << uczniowie[i].imie <<" "<< uczniowie[i].nazwisko <<" "<< uczniowie[i].wiek <<" "<< uczniowie[i].nrAlbumu <<" "<< uczniowie[i].srOcen << endl;
 } 
 
+plik.write((const char *) &uczniowie, sizeof uczniowie);
 
 plik.close();
+
+} else {
+    cout << "jakis blad" << endl;
+}
+
 
 plik.open( "studenci.bin", ios::in | ios::binary );
 
 
-if(plik.is_open())
-	{
-		char wiersz[10000];
+if(plik.is_open()){
+	plik.read((char *) &uczniowie , sizeof uczniowie);
 
-		while(plik.getline(wiersz,10000)) 
-		{
-			cout<< wiersz << endl;
-			
-		}
-        cout << endl;
-	}
+    plik.close();
+} else {
+    cout << "jakis blad" << endl;
+}
 
     return 0;
 }
