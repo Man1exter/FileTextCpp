@@ -1,5 +1,0 @@
-marcin majkut 12 12 5
-seba eba 13 21 3.5
-eba eba 14 12 4
-keba leba 15 21 2
-neba leba 15 1 2

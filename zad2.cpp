@@ -3,9 +3,7 @@
 #include <string>
 #include <cstdlib>
 
-
 using namespace std;
-
 
 struct Osoba{
 
@@ -15,7 +13,6 @@ struct Osoba{
     float srOcen;
     int wiek;
 };
-
 
 
 int main(){
