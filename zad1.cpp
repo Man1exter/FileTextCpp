@@ -14,13 +14,9 @@ cin >> nazwisko;
 
 }
 
-int main(){
-
-string imie,nazwisko;
+void zapisz(string imie, string nazwisko){
 
 fstream plik;
-
-czytaj(imie,nazwisko);
 
 plik.open( "dane.txt", ios::out | ios::app );
 
@@ -30,11 +26,12 @@ plik << imie <<" "<<  nazwisko << endl;
 cout << "Dane zostaly zapisane!" << endl;
 plik.close();
 
+}
 
-// odczyt z pliku i pokazanie w konsoli: ... 
+void odczyt(string imie, string nazwisko){
+	fstream plik;
 
-
-plik.open( "dane.txt", ios::in );
+	plik.open( "dane.txt", ios::in );
 
 
 if(plik.is_open())
@@ -46,9 +43,18 @@ if(plik.is_open())
 			cout<< wiersz << endl;
 			
 		}
-        cout << endl;
 	}
+}
 
+int main(){
+
+string imie,nazwisko;
+
+fstream plik;
+
+czytaj(imie,nazwisko);
+zapisz(imie,nazwisko);
+odczyt(imie,nazwisko);
 
     return 0;
 }
