@@ -14,12 +14,11 @@ struct Osoba{
     int wiek;
 };
 
-
 int main(){
 
 fstream plik;
 
-plik.open( "studenci.txt", ios::out | ios::binary);
+plik.open( "studenci.bin", ios::out | ios::binary);
 
 Osoba uczniowie[5];
 
@@ -59,7 +58,7 @@ plik << uczniowie[i].imie <<" "<< uczniowie[i].nazwisko <<" "<< uczniowie[i].wie
 
 plik.close();
 
-plik.open( "studenci.txt",ios::in | ios::binary );
+plik.open( "studenci.bin", ios::in | ios::binary );
 
 
 if(plik.is_open())
