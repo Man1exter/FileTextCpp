@@ -1,0 +1,1 @@
+Osoba uczniowie[5];
